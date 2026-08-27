@@ -1,23 +1,645 @@
-<!doctype html><html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Magasin 23 — Inredning & presenter</title><meta name="description" content="Handplockad inredning och presenter i Ulricehamn.">
-<style>
-:root{--ink:#171713;--cream:#f3efe7;--wine:#7d2d32;--line:#ddd8cf}*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:Arial,sans-serif}a{color:inherit;text-decoration:none}img{width:100%;height:100%;object-fit:cover}button{font:inherit}.notice{background:#171713;color:#fff;text-align:center;padding:10px;font-size:11px;letter-spacing:.14em}.header{max-width:1440px;margin:auto;padding:20px 36px 14px;display:grid;grid-template-columns:1fr 2fr 1fr;align-items:center;gap:28px}.brand{text-align:center;font:29px Georgia;letter-spacing:.08em}.brand i{font-weight:bold}.search{border-bottom:1px solid;padding:12px;color:#777;font-size:13px}.actions{text-align:right;font-size:13px}.nav{border-block:1px solid var(--line);display:flex;justify-content:center;gap:30px;padding:14px;font-size:11px;text-transform:uppercase;letter-spacing:.11em}.deal{color:var(--wine)}.hero{height:min(72vw,750px);min-height:520px;position:relative;background:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2000&q=88') center/cover}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1119,transparent 70%)}.hero-copy{position:absolute;z-index:1;left:7%;top:50%;transform:translateY(-50%);color:#fff}.kicker{font-size:11px;letter-spacing:.2em;font-weight:bold}.hero h1,h2{font-family:Georgia,serif;font-weight:400}.hero h1{font-size:clamp(52px,7vw,100px);line-height:.92;margin:20px 0}.hero p{font-size:17px;line-height:1.6;max-width:460px}.btn{display:inline-block;background:#171713;color:#fff;padding:16px 24px;margin-top:16px;font-size:11px;text-transform:uppercase;letter-spacing:.13em}.btn.light{background:#fff;color:#171713}.btn.outline{background:transparent;border:1px solid #fff;margin-left:8px}.benefits{max-width:1440px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}.benefits div{text-align:center;padding:22px;border-right:1px solid var(--line);font-size:12px}.benefits b{display:block;text-transform:uppercase;margin-bottom:5px}.pad{max-width:1440px;margin:auto;padding:80px 36px}.heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:32px}.heading h2{font-size:clamp(34px,4vw,58px);margin:7px 0}.heading a{font-size:11px;text-transform:uppercase;border-bottom:1px solid}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.pic{height:390px;position:relative;background:#eee}.tag{position:absolute;background:#fff;padding:7px 9px;left:12px;top:12px;font-size:10px;font-weight:bold}.product h3{font:20px Georgia;margin:14px 0 5px}.product small{color:#777}.price{display:flex;gap:10px;margin:10px 0 14px}.sale{color:var(--wine)}.add{width:100%;border:1px solid;background:#fff;padding:12px;text-transform:uppercase;font-size:10px;letter-spacing:.1em}.add:hover{background:#171713;color:#fff}.editorials{max-width:1440px;margin:auto;padding:0 36px;display:grid;grid-template-columns:1.25fr .75fr;gap:18px}.editorial{min-height:620px;position:relative;background-size:cover;background-position:center}.editorial:first-child{background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=88')}.editorial:last-child{background-image:url('https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=1000&q=88')}.copy{position:absolute;left:32px;bottom:32px;background:#fff;padding:26px;max-width:370px}.copy h2{font-size:40px;line-height:1;margin:8px 0}.copy span:last-child{font-size:11px;text-transform:uppercase;border-bottom:1px solid}.deals{background:var(--cream);margin-top:80px}.dealgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.dealcard{background:#fff;text-align:center;padding:40px 18px}.dealcard strong{display:block;font:48px Georgia;color:var(--wine);margin:8px}.dealcard span,.dealcard a{font-size:11px;text-transform:uppercase;letter-spacing:.1em}.dealcard a{display:inline-block;border-bottom:1px solid;margin-top:14px}.gift,.story{max-width:1440px;margin:80px auto 0;display:grid;grid-template-columns:1fr 1fr}.gift{background:#283127;color:#fff}.gift-img,.story-img{min-height:540px;background:center/cover}.gift-img{background-image:url('https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=1100&q=88')}.story-img{background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=88')}.gift-copy,.story-copy{padding:65px;align-self:center}.gift h2,.story h2{font-size:52px;line-height:1.05;margin:14px 0}.gift p,.story p{line-height:1.7}.footer{background:#171713;color:#fff;padding:55px 5vw;display:grid;grid-template-columns:2fr repeat(3,1fr);gap:45px}.footer h4{font-size:11px;text-transform:uppercase}.footer p,.footer a{display:block;color:#c9c5bd;font-size:13px;line-height:1.8}.toast{position:fixed;right:20px;bottom:20px;background:#171713;color:#fff;padding:14px 20px;opacity:0;transition:.2s}.toast.show{opacity:1}
-@media(max-width:800px){.header{grid-template-columns:1fr auto;padding:15px}.brand{text-align:left;font-size:23px}.search{grid-row:2;grid-column:1/-1}.nav{justify-content:flex-start;overflow:auto;white-space:nowrap}.hero{height:620px;background-position:62%}.hero-copy{left:22px;right:20px;top:auto;bottom:45px;transform:none}.hero h1{font-size:52px}.benefits{grid-template-columns:1fr 1fr}.products{display:flex;overflow:auto}.product{min-width:76vw}.editorials,.gift,.story{grid-template-columns:1fr}.editorials{padding:0 16px}.editorial{min-height:500px}.dealgrid{grid-template-columns:1fr 1fr}.gift-copy,.story-copy{padding:38px 24px}.gift h2,.story h2{font-size:40px}.footer{grid-template-columns:1fr 1fr}.pad{padding:60px 16px}}
-</style></head><body>
-<div class="notice">FRI FRAKT ÖVER 799 KR · KLARNA & KORT · HÄMTA GRATIS I BUTIK</div>
-<header class="header"><a class="brand" href="/magasin23/">MAGASIN <i>23</i></a><a class="search" href="/magasin23/produkter/">Sök produkter, kategorier och inspiration…</a><div class="actions">♡ &nbsp; Varukorg (<b id="count">0</b>)</div></header>
-<nav class="nav"><a href="/magasin23/produkter/">Nyheter</a><a class="deal" href="/magasin23/produkter/">Kampanj</a><a href="/magasin23/produkter/">Inredning</a><a href="/magasin23/produkter/">Kök & dukning</a><a href="/magasin23/produkter/">Textilier</a><a href="/magasin23/produkter/">Presenter</a><a href="#butiken">Om oss</a></nav>
-<main><section class="hero"><div class="hero-copy"><span class="kicker">NY SÄSONG · NYA FAVORITER</span><h1>Hemmet börjar<br>med känslan.</h1><p>Handplockad inredning, personliga presenter och detaljer som gör skillnad.</p><a class="btn light" href="/magasin23/produkter/">Shoppa nyheter</a><a class="btn outline" href="/magasin23/produkter/">Se kampanj</a></div></section>
-<div class="benefits"><div><b>Trygg betalning</b>Klarna & kort</div><div><b>Hämta gratis</b>I Ulricehamn</div><div><b>Personlig service</b>Vi hjälper dig</div><div><b>Presentinslagning</b>Färdig att ge bort</div></div>
-<section class="pad"><div class="heading"><div><span class="kicker">POPULÄRT JUST NU</span><h2>Utvalt för ditt hem</h2></div><a href="/magasin23/produkter/">Visa alla</a></div><div class="products">
-<article class="product"><div class="pic"><span class="tag">NYHET</span><img src="https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=800&q=85" alt="Vas Alba"></div><h3>Vas Alba</h3><small>Inredningsdetaljer</small><div class="price"><b>349 kr</b></div><button class="add">Lägg i varukorg</button></article>
-<article class="product"><div class="pic"><span class="tag">DEAL −20%</span><img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=85" alt="Kuddfodral Sienna"></div><h3>Kuddfodral Sienna</h3><small>Textilier</small><div class="price"><b class="sale">249 kr</b><del>319 kr</del></div><button class="add">Lägg i varukorg</button></article>
-<article class="product"><div class="pic"><img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=85" alt="Ljusstake Sand"></div><h3>Ljusstake Sand</h3><small>Inredningsdetaljer</small><div class="price"><b>289 kr</b></div><button class="add">Lägg i varukorg</button></article>
-<article class="product"><div class="pic"><span class="tag">DEAL −25%</span><img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=85" alt="Keramikskål Dune"></div><h3>Keramikskål Dune</h3><small>Kök & dukning</small><div class="price"><b class="sale">399 kr</b><del>529 kr</del></div><button class="add">Lägg i varukorg</button></article>
-</div></section>
-<section class="editorials"><a class="editorial" href="/magasin23/produkter/"><div class="copy"><span class="kicker">SÄSONGENS RUM</span><h2>Mjuka former,<br>varma toner</h2><p>En lugnare palett för höstens hem.</p><span>Shoppa kollektionen →</span></div></a><a class="editorial" href="/magasin23/produkter/"><div class="copy"><span class="kicker">DUKA VACKERT</span><h2>Detaljerna gör middagen</h2><span>Shoppa dukning →</span></div></a></section>
-<section class="deals pad"><div class="heading"><div><span class="kicker">AKTUELLA DEALS</span><h2>Mer känsla för pengarna</h2></div></div><div class="dealgrid"><div class="dealcard"><span>Upp till</span><strong>30%</strong><span>på inredning</span><a href="/magasin23/produkter/">Shoppa nu</a></div><div class="dealcard"><span>Upp till</span><strong>25%</strong><span>på textilier</span><a href="/magasin23/produkter/">Shoppa nu</a></div><div class="dealcard"><span>Utvalda</span><strong>20%</strong><span>på dukning</span><a href="/magasin23/produkter/">Shoppa nu</a></div><div class="dealcard"><span>Presenter</span><strong>299 kr</strong><span>och under</span><a href="/magasin23/produkter/">Shoppa nu</a></div></div></section>
-<section class="gift"><div class="gift-img"></div><div class="gift-copy"><span class="kicker">PRESENTHJÄLPEN</span><h2>En fin present.<br>Utan att leta länge.</h2><p>Välj mottagare, tillfälle och budget. Vi hjälper dig hitta rätt — och slår gärna in den för upphämtning i butiken.</p><a class="btn light" href="/magasin23/produkter/">Hitta en present</a></div></section>
-<section class="story" id="butiken"><div class="story-img"></div><div class="story-copy"><span class="kicker">MAGASIN 23 · ULRICEHAMN</span><h2>Personligt utvalt,<br>för hem med känsla.</h2><p>Vi väljer sortimentet med omsorg och hjälper dig hitta något som känns precis rätt — till dig själv eller någon du tycker om.</p><a class="btn" href="/magasin23/produkter/">Handla sortimentet</a></div></section></main>
-<footer class="footer"><div><div class="brand">MAGASIN <i>23</i></div><p>Handplockad inredning och presenter i hjärtat av Ulricehamn.</p></div><div><h4>Besök oss</h4><p>Storgatan 22<br>523 30 Ulricehamn</p></div><div><h4>Shoppa</h4><a href="/magasin23/produkter/">Alla produkter</a><a href="/magasin23/produkter/">Nyheter</a><a href="/magasin23/produkter/">Kampanj</a></div><div><h4>Följ oss</h4><a href="https://www.instagram.com/magasin_23/">Instagram ↗</a><p>Konceptdemo — produkter och priser är exempel.</p></div></footer>
-<div class="toast" id="toast">Produkten har lagts i varukorgen</div><script>let c=0;document.querySelectorAll('.add').forEach(b=>b.onclick=()=>{count.textContent=++c;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1500)})</script></body></html>
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Magasin 23 — Inredning & presenter</title>
+    <meta
+      name="description"
+      content="Handplockad inredning och presenter i Ulricehamn."
+    />
+    <style>
+      :root {
+        --ink: #171713;
+        --cream: #f3efe7;
+        --wine: #7d2d32;
+        --line: #ddd8cf;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: Arial, sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      button {
+        font: inherit;
+      }
+      .notice {
+        background: #171713;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+      }
+      .header {
+        max-width: 1440px;
+        margin: auto;
+        padding: 20px 36px 14px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        gap: 28px;
+      }
+      .brand {
+        text-align: center;
+        font: 29px Georgia;
+        letter-spacing: 0.08em;
+      }
+      .brand i {
+        font-weight: bold;
+      }
+      .search {
+        border-bottom: 1px solid;
+        padding: 12px;
+        color: #777;
+        font-size: 13px;
+      }
+      .actions {
+        text-align: right;
+        font-size: 13px;
+      }
+      .nav {
+        border-block: 1px solid var(--line);
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 14px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+      }
+      .deal {
+        color: var(--wine);
+      }
+      .hero {
+        height: min(72vw, 750px);
+        min-height: 520px;
+        position: relative;
+        background: url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2000&q=88")
+          center/cover;
+      }
+      .hero:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, #1119, transparent 70%);
+      }
+      .hero-copy {
+        position: absolute;
+        z-index: 1;
+        left: 7%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+      }
+      .kicker {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        font-weight: bold;
+      }
+      .hero h1,
+      h2 {
+        font-family: Georgia, serif;
+        font-weight: 400;
+      }
+      .hero h1 {
+        font-size: clamp(52px, 7vw, 100px);
+        line-height: 0.92;
+        margin: 20px 0;
+      }
+      .hero p {
+        font-size: 17px;
+        line-height: 1.6;
+        max-width: 460px;
+      }
+      .btn {
+        display: inline-block;
+        background: #171713;
+        color: #fff;
+        padding: 16px 24px;
+        margin-top: 16px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+      }
+      .btn.light {
+        background: #fff;
+        color: #171713;
+      }
+      .btn.outline {
+        background: transparent;
+        border: 1px solid #fff;
+        margin-left: 8px;
+      }
+      .benefits {
+        max-width: 1440px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-bottom: 1px solid var(--line);
+      }
+      .benefits div {
+        text-align: center;
+        padding: 22px;
+        border-right: 1px solid var(--line);
+        font-size: 12px;
+      }
+      .benefits b {
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+      .pad {
+        max-width: 1440px;
+        margin: auto;
+        padding: 80px 36px;
+      }
+      .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 32px;
+      }
+      .heading h2 {
+        font-size: clamp(34px, 4vw, 58px);
+        margin: 7px 0;
+      }
+      .heading a {
+        font-size: 11px;
+        text-transform: uppercase;
+        border-bottom: 1px solid;
+      }
+      .products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+      .pic {
+        height: 390px;
+        position: relative;
+        background: #eee;
+      }
+      .tag {
+        position: absolute;
+        background: #fff;
+        padding: 7px 9px;
+        left: 12px;
+        top: 12px;
+        font-size: 10px;
+        font-weight: bold;
+      }
+      .product h3 {
+        font: 20px Georgia;
+        margin: 14px 0 5px;
+      }
+      .product small {
+        color: #777;
+      }
+      .price {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0 14px;
+      }
+      .sale {
+        color: var(--wine);
+      }
+      .add {
+        width: 100%;
+        border: 1px solid;
+        background: #fff;
+        padding: 12px;
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+      }
+      .add:hover {
+        background: #171713;
+        color: #fff;
+      }
+      .editorials {
+        max-width: 1440px;
+        margin: auto;
+        padding: 0 36px;
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 18px;
+      }
+      .editorial {
+        min-height: 620px;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+      }
+      .editorial:first-child {
+        background-image: url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1400&q=88");
+      }
+      .editorial:last-child {
+        background-image: url("https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&q=88");
+      }
+      .copy {
+        position: absolute;
+        left: 32px;
+        bottom: 32px;
+        background: #fff;
+        padding: 26px;
+        max-width: 370px;
+      }
+      .copy h2 {
+        font-size: 40px;
+        line-height: 1;
+        margin: 8px 0;
+      }
+      .copy span:last-child {
+        font-size: 11px;
+        text-transform: uppercase;
+        border-bottom: 1px solid;
+      }
+      .deals {
+        background: var(--cream);
+        margin-top: 80px;
+      }
+      .dealgrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+      .dealcard {
+        background: #fff;
+        text-align: center;
+        padding: 40px 18px;
+      }
+      .dealcard strong {
+        display: block;
+        font: 48px Georgia;
+        color: var(--wine);
+        margin: 8px;
+      }
+      .dealcard span,
+      .dealcard a {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .dealcard a {
+        display: inline-block;
+        border-bottom: 1px solid;
+        margin-top: 14px;
+      }
+      .gift,
+      .story {
+        max-width: 1440px;
+        margin: 80px auto 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .gift {
+        background: #283127;
+        color: #fff;
+      }
+      .gift-img,
+      .story-img {
+        min-height: 540px;
+        background: center/cover;
+      }
+      .gift-img {
+        background-image: url("https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=1100&q=88");
+      }
+      .story-img {
+        background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=88");
+      }
+      .gift-copy,
+      .story-copy {
+        padding: 65px;
+        align-self: center;
+      }
+      .gift h2,
+      .story h2 {
+        font-size: 52px;
+        line-height: 1.05;
+        margin: 14px 0;
+      }
+      .gift p,
+      .story p {
+        line-height: 1.7;
+      }
+      .footer {
+        background: #171713;
+        color: #fff;
+        padding: 55px 5vw;
+        display: grid;
+        grid-template-columns: 2fr repeat(3, 1fr);
+        gap: 45px;
+      }
+      .footer h4 {
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+      .footer p,
+      .footer a {
+        display: block;
+        color: #c9c5bd;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+      .toast {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: #171713;
+        color: #fff;
+        padding: 14px 20px;
+        opacity: 0;
+        transition: 0.2s;
+      }
+      .toast.show {
+        opacity: 1;
+      }
+      @media (max-width: 800px) {
+        .header {
+          grid-template-columns: 1fr auto;
+          padding: 15px;
+        }
+        .brand {
+          text-align: left;
+          font-size: 23px;
+        }
+        .search {
+          grid-row: 2;
+          grid-column: 1/-1;
+        }
+        .nav {
+          justify-content: flex-start;
+          overflow: auto;
+          white-space: nowrap;
+        }
+        .hero {
+          height: 620px;
+          background-position: 62%;
+        }
+        .hero-copy {
+          left: 22px;
+          right: 20px;
+          top: auto;
+          bottom: 45px;
+          transform: none;
+        }
+        .hero h1 {
+          font-size: 52px;
+        }
+        .benefits {
+          grid-template-columns: 1fr 1fr;
+        }
+        .products {
+          display: flex;
+          overflow: auto;
+        }
+        .product {
+          min-width: 76vw;
+        }
+        .editorials,
+        .gift,
+        .story {
+          grid-template-columns: 1fr;
+        }
+        .editorials {
+          padding: 0 16px;
+        }
+        .editorial {
+          min-height: 500px;
+        }
+        .dealgrid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .gift-copy,
+        .story-copy {
+          padding: 38px 24px;
+        }
+        .gift h2,
+        .story h2 {
+          font-size: 40px;
+        }
+        .footer {
+          grid-template-columns: 1fr 1fr;
+        }
+        .pad {
+          padding: 60px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="notice">
+      FRI FRAKT ÖVER 799 KR · KLARNA & KORT · HÄMTA GRATIS I BUTIK
+    </div>
+    <header class="header">
+      <a class="brand" href="/magasin23/">MAGASIN <i>23</i></a
+      ><a class="search" href="/magasin23/produkter/"
+        >Sök produkter, kategorier och inspiration…</a
+      >
+      <div class="actions">♡ &nbsp; Varukorg (<b id="count">0</b>)</div>
+    </header>
+    <nav class="nav">
+      <a href="/magasin23/produkter/">Nyheter</a
+      ><a class="deal" href="/magasin23/produkter/">Kampanj</a
+      ><a href="/magasin23/produkter/">Inredning</a
+      ><a href="/magasin23/produkter/">Kök & dukning</a
+      ><a href="/magasin23/produkter/">Textilier</a
+      ><a href="/magasin23/produkter/">Presenter</a
+      ><a href="#butiken">Om oss</a>
+    </nav>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="kicker">NY SÄSONG · NYA FAVORITER</span>
+          <h1>Hemmet börjar<br />med känslan.</h1>
+          <p>
+            Handplockad inredning, personliga presenter och detaljer som gör
+            skillnad.
+          </p>
+          <a class="btn light" href="/magasin23/produkter/">Shoppa nyheter</a
+          ><a class="btn outline" href="/magasin23/produkter/">Se kampanj</a>
+        </div>
+      </section>
+      <div class="benefits">
+        <div><b>Trygg betalning</b>Klarna & kort</div>
+        <div><b>Hämta gratis</b>I Ulricehamn</div>
+        <div><b>Personlig service</b>Vi hjälper dig</div>
+        <div><b>Presentinslagning</b>Färdig att ge bort</div>
+      </div>
+      <section class="pad">
+        <div class="heading">
+          <div>
+            <span class="kicker">POPULÄRT JUST NU</span>
+            <h2>Utvalt för ditt hem</h2>
+          </div>
+          <a href="/magasin23/produkter/">Visa alla</a>
+        </div>
+        <div class="products">
+          <article class="product">
+            <div class="pic">
+              <span class="tag">NYHET</span
+              ><img
+                src="https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=800&q=85"
+                alt="Vas Alba"
+              />
+            </div>
+            <h3>Vas Alba</h3>
+            <small>Inredningsdetaljer</small>
+            <div class="price"><b>349 kr</b></div>
+            <button class="add">Lägg i varukorg</button>
+          </article>
+          <article class="product">
+            <div class="pic">
+              <span class="tag">DEAL −20%</span
+              ><img
+                src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=85"
+                alt="Kuddfodral Sienna"
+              />
+            </div>
+            <h3>Kuddfodral Sienna</h3>
+            <small>Textilier</small>
+            <div class="price"><b class="sale">249 kr</b><del>319 kr</del></div>
+            <button class="add">Lägg i varukorg</button>
+          </article>
+          <article class="product">
+            <div class="pic">
+              <img
+                src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=85"
+                alt="Ljusstake Sand"
+              />
+            </div>
+            <h3>Ljusstake Sand</h3>
+            <small>Inredningsdetaljer</small>
+            <div class="price"><b>289 kr</b></div>
+            <button class="add">Lägg i varukorg</button>
+          </article>
+          <article class="product">
+            <div class="pic">
+              <span class="tag">DEAL −25%</span
+              ><img
+                src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=85"
+                alt="Keramikskål Dune"
+              />
+            </div>
+            <h3>Keramikskål Dune</h3>
+            <small>Kök & dukning</small>
+            <div class="price"><b class="sale">399 kr</b><del>529 kr</del></div>
+            <button class="add">Lägg i varukorg</button>
+          </article>
+        </div>
+      </section>
+      <section class="editorials">
+        <a class="editorial" href="/magasin23/produkter/"
+          ><div class="copy">
+            <span class="kicker">INRED MED KÄNSLA</span>
+            <h2>Kuddar, plädar<br />och textilier</h2>
+            <p>Mjuka material som gör hemmet personligt och ombonat.</p>
+            <span>Shoppa textilier →</span>
+          </div></a
+        ><a class="editorial" href="/magasin23/produkter/"
+          ><div class="copy">
+            <span class="kicker">KÖK &amp; DUKNING</span>
+            <h2>Porslin för vardag och fest</h2>
+            <span>Shoppa dukning →</span>
+          </div></a
+        >
+      </section>
+      <section class="deals pad">
+        <div class="heading">
+          <div>
+            <span class="kicker">HANDLA EFTER KATEGORI</span>
+            <h2>Hitta något som passar</h2>
+          </div>
+        </div>
+        <div class="dealgrid">
+          <div class="dealcard">
+            <span>Mjukt &amp; ombonat</span><strong>Textil</strong><span>Kuddar, gardiner &amp; sängkläder</span
+            ><a href="/magasin23/produkter/">Shoppa nu</a>
+          </div>
+          <div class="dealcard">
+            <span>För hela hemmet</span><strong>Detaljer</strong><span>Vaser, ljus &amp; dekoration</span
+            ><a href="/magasin23/produkter/">Shoppa nu</a>
+          </div>
+          <div class="dealcard">
+            <span>Vardag &amp; fest</span><strong>Porslin</strong><span>Servering och dukning</span
+            ><a href="/magasin23/produkter/">Shoppa nu</a>
+          </div>
+          <div class="dealcard">
+            <span>Utvalt med omsorg</span><strong>Presenter</strong><span>Gåvor för alla tillfällen</span
+            ><a href="/magasin23/produkter/">Shoppa nu</a>
+          </div>
+        </div>
+      </section>
+      <section class="gift">
+        <div class="gift-img"></div>
+        <div class="gift-copy">
+          <span class="kicker">PRESENTHJÄLPEN</span>
+          <h2>En fin present.<br />Utan att leta länge.</h2>
+          <p>
+            Välj mottagare, tillfälle och budget. Vi hjälper dig hitta rätt —
+            och slår gärna in den för upphämtning i butiken.
+          </p>
+          <a class="btn light" href="/magasin23/produkter/">Hitta en present</a>
+        </div>
+      </section>
+      <section class="story" id="butiken">
+        <div class="story-img"></div>
+        <div class="story-copy">
+          <span class="kicker">MAGASIN 23 · ULRICEHAMN</span>
+          <h2>En personlig butik med det lilla extra.</h2>
+          <p>
+            Här finns möbler, gardiner, kuddar, sängkläder, porslin, blommor och
+            presenter. Sortimentet är noga utvalt från bland andra Fondaco,
+            Olsson &amp; Jensen, Artwood och Strömshaga.
+          </p>
+          <a class="btn" href="/magasin23/produkter/">Upptäck sortimentet</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div>
+        <div class="brand">MAGASIN <i>23</i></div>
+        <p>Handplockad inredning och presenter i hjärtat av Ulricehamn.</p>
+      </div>
+      <div>
+        <h4>Besök oss</h4>
+        <p>Storgatan 22<br />523 30 Ulricehamn</p>
+      </div>
+      <div>
+        <h4>Shoppa</h4>
+        <a href="/magasin23/produkter/">Alla produkter</a
+        ><a href="/magasin23/produkter/">Nyheter</a
+        ><a href="/magasin23/produkter/">Kampanj</a>
+      </div>
+      <div>
+        <h4>Följ oss</h4>
+        <a href="https://www.instagram.com/magasin_23/">Instagram ↗</a>
+        <p>Konceptdemo — produkter och priser är exempel.</p>
+      </div>
+    </footer>
+    <div class="toast" id="toast">Produkten har lagts i varukorgen</div>
+    <script>
+      let c = 0;
+      document.querySelectorAll(".add").forEach(
+        (b) =>
+          (b.onclick = () => {
+            count.textContent = ++c;
+            toast.classList.add("show");
+            setTimeout(() => toast.classList.remove("show"), 1500);
+          }),
+      );
+    </script>
+  </body>
+</html>
